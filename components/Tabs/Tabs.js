@@ -5,7 +5,7 @@ class TabLink {
     this.element = element;
 
     // Get the custom data attribute on the Link
-    // this.data;
+    this.data = document.querySelector('.tabs-link')
 
     // Using the custom data attribute get the associated Item element
     // this.itemElement;
@@ -59,5 +59,7 @@ class TabItem {
 
 */
 
-// uncomment out
-// links = document.querySelectorAll();
+const links = document.querySelectorAll('.tab-link');
+links.forEach((link) => {
+  return new TabLink(link);
+});
